@@ -8,14 +8,14 @@ import {
   Button,
   Row,
   Col,
-  Space
+  Space,
+  Textarea
 } from 'tdesign-react';
 import { ChevronDownIcon, ChevronRightIcon } from 'tdesign-icons-react';
 
 const { FormItem } = Form;
 const { Option } = Select;
 const { Group: RadioGroup } = Radio;
-const { Panel } = Collapse;
 
 // 项目固有基础信息
 const projectInfo = {
@@ -256,7 +256,7 @@ const ProblemInfoModule: React.FC = () => {
                   <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px', paddingTop: '8px' }}>
                     问题描述
                   </span>
-                  <Input.Textarea placeholder="请详细描述问题情况" rows={4} style={{ flex: 1 }} />
+                  <Textarea placeholder="请详细描述问题情况" rows={4} style={{ flex: 1 }} />
                 </div>
               </FormItem>
             </Col>
@@ -399,7 +399,7 @@ const ProblemInfoModule: React.FC = () => {
                         <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px', paddingTop: '8px' }}>
                           问题影响及措施
                         </span>
-                        <Input.Textarea placeholder="请描述问题影响及采取的措施" rows={4} style={{ flex: 1 }} />
+                        <Textarea placeholder="请描述问题影响及采取的措施" rows={4} style={{ flex: 1 }} />
                       </div>
                     </FormItem>
                   </Col>

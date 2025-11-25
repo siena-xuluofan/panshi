@@ -1,23 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-    },
-  },
-  css: {
-    preprocessorOptions: {
-      less: {
-        modifyVars: {
-          '@btn-height-default': '40px',
-        },
-      },
-    },
+  build: {
+    outDir: 'dist',
+    sourcemap: true
   },
   server: {
     host: '0.0.0.0',

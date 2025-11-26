@@ -1,6 +1,6 @@
+/* 引入 TDesign 样式 */
+@import 'tdesign-react/esm/style/index.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* 引入 TDesign 样式 */
-@import 'tdesign-react/esm/style/index.css';

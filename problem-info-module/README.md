@@ -68,6 +68,32 @@
 - Vite 5
 - Tailwind CSS 3.4.17
 
+## 部署到 Vercel
+
+### 方法一：通过 Vercel 网站部署（推荐）
+
+1. 访问 [Vercel](https://vercel.com)
+2. 使用 GitHub 账号登录
+3. 点击 "New Project"
+4. 导入你的 GitHub 仓库：`siena-xuluofan/panshi`
+5. 配置项目：
+   - **Root Directory**: 选择 `problem-info-module`
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+6. 点击 "Deploy"
+
+### 方法二：使用 Vercel CLI
+
+```bash
+# 安装 Vercel CLI
+npm install -g vercel
+
+# 在项目目录下运行
+cd problem-info-module
+vercel
+```
+
 ## 安装与运行
 
 ### 开发环境运行

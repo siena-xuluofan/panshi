@@ -262,13 +262,7 @@
 <body>
     <div class="container">
         <div class="page-header">
-            <div class="user-info">
-                <h1 class="page-title">问题处理</h1>
-                <div>
-                    <span>当前用户：<span class="user-name" id="currentUserDisplay">获取中...</span></span>
-                    <button class="btn-link" onclick="showUserModal()" style="margin-left: 16px;">修改姓名</button>
-                </div>
-            </div>
+            <h1 class="page-title">问题处理</h1>
         </div>
 
         <!-- 处理记录部分 -->
@@ -359,24 +353,6 @@
             <div class="modal-footer">
                 <button class="btn" style="background-color: #f0f0f0;" onclick="hideResultModal()">取消</button>
                 <button class="btn btn-primary" onclick="submitResult()">确定</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- 用户姓名设置弹窗 -->
-    <div class="modal" id="userModal">
-        <div class="modal-content">
-            <div class="modal-header">设置用户信息</div>
-            <div class="form-group">
-                <label class="form-label">RTX 或姓名 *</label>
-                <input type="text" class="form-control" id="userNameInput" placeholder="请输入您的 RTX 或真实姓名">
-                <div style="margin-top: 8px; font-size: 12px; color: rgba(0, 0, 0, 0.45);">
-                    系统会自动从 Cookie 中读取 RTX 信息，如无法自动获取请手动输入
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" style="background-color: #f0f0f0;" onclick="hideUserModal()">取消</button>
-                <button class="btn btn-primary" onclick="saveUserName()">确定</button>
             </div>
         </div>
     </div>
@@ -484,8 +460,8 @@
 
         // 获取当前用户 RTX
         function getCurrentUser() {
-            // 如果没有获取到 RTX，显示提示信息
-            return currentUserName || '未登录';
+            // 静默获取，如果没有就返回"当前用户"
+            return currentUserName || '当前用户';
         }
 
         // 显示用户姓名设置弹窗
@@ -721,18 +697,6 @@
 
         // 初始化页面
         document.addEventListener('DOMContentLoaded', function() {
-            // 更新用户显示
-            updateUserDisplay();
-            
-            // 如果未获取到 RTX，提示用户设置
-            if (!currentUserName) {
-                setTimeout(() => {
-                    if (confirm('未检测到您的 RTX 信息，是否手动设置？')) {
-                        showUserModal();
-                    }
-                }, 500);
-            }
-            
             renderRecords();
             renderComments();
         });
@@ -747,12 +711,6 @@
         document.getElementById('resultModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 hideResultModal();
-            }
-        });
-
-        document.getElementById('userModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                hideUserModal();
             }
         });
     </script>

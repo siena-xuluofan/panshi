@@ -145,7 +145,7 @@ const App: React.FC = () => {
       <div className="page-header">
         <div className="page-title">
           <span>无合同项目用项目-问题单</span>
-          <Tag theme="warning" variant="light" style={{ marginLeft: '12px' }}>已关闭</Tag>
+          <Tag theme="warning" variant="light" style={{ marginLeft: '12px' }}>已关注</Tag>
           <Tag theme="default" variant="light" style={{ marginLeft: '8px' }}>切换旧版</Tag>
         </div>
         <div className="page-actions">

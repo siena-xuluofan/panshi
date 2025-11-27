@@ -280,40 +280,42 @@
             </div>
         </div>
 
-                <!-- 问题指派 -->
-                <div class="mt-6 pt-6 border-t border-gray-200">
-                    <h3 class="text-base font-medium text-gray-900 mb-4">问题处理</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="tdesign-form-item">
-                            <div class="flex items-center">
-                                <span class="text-sm font-medium text-gray-700 mr-2 w-24">期望解决日期</span>
-                                <input type="date" name="expectedDate" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请选择日期">
-                            </div>
-                        </div>
-                        <div class="tdesign-form-item">
-                            <div class="flex items-center">
-                                <span class="text-sm font-medium text-gray-700 mr-2 w-24">实际解决日期</span>
-                                <input type="date" name="actualDate" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请选择日期">
-                            </div>
-                        </div>
-                        <div class="tdesign-form-item">
-                            <div class="flex items-center">
-                                <span class="text-sm font-medium text-gray-700 mr-2 w-24">责任人</span>
-                                <input type="text" name="responsible" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="若需添加多位负责人请输入,逗号分隔多个,如zhangsanA@ABC">
-                            </div>
-                        </div>
-                        <div class="tdesign-form-item">
-                            <div class="flex items-center">
-                                <span class="text-sm font-medium text-gray-700 mr-2 w-24">抄送人 <svg class="inline w-4 h-4 text-blue-500 cursor-pointer ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>抄送人可选</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
-                                <input type="text" name="cc" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="若需添加多位抄送人请输入,逗号分隔多个,如zhangsanA@ABC">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="mt-6 flex space-x-4">
                     <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">保存问题</button>
                     <button type="button" id="resetButton" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">重置</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 问题处理 -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+            <h2 class="text-lg font-medium text-gray-900 mb-4">问题处理</h2>
+            <form id="assignmentForm" class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">期望解决日期</span>
+                            <input type="date" name="expectedDate" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请选择日期">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">实际解决日期</span>
+                            <input type="date" name="actualDate" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请选择日期">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">责任人</span>
+                            <input type="text" name="responsible" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="若需添加多位负责人请输入,逗号分隔多个,如zhangsanA@ABC">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">抄送人 <svg class="inline w-4 h-4 text-blue-500 cursor-pointer ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>抄送人可选</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+                            <input type="text" name="cc" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="若需添加多位抄送人请输入,逗号分隔多个,如zhangsanA@ABC">
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

@@ -67,7 +67,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   项目编码
                 </span>
                 <Input defaultValue={projectInfo.projectCode} disabled style={{ flex: 1 }} />
@@ -77,7 +77,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   项目名称
                 </span>
                 <Input defaultValue={projectInfo.projectName} disabled style={{ flex: 1 }} />
@@ -87,7 +87,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   项目行业
                 </span>
                 <Input defaultValue={projectInfo.projectIndustry} disabled style={{ flex: 1 }} />
@@ -97,7 +97,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   项目状态
                 </span>
                 <Input defaultValue={projectInfo.projectStatus} disabled style={{ flex: 1 }} />
@@ -107,7 +107,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   客户名称
                 </span>
                 <Input defaultValue={projectInfo.customerName} disabled style={{ flex: 1 }} />
@@ -117,7 +117,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   客户UIN
                 </span>
                 <Input defaultValue={projectInfo.customerUIN} disabled style={{ flex: 1 }} />
@@ -127,7 +127,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   一级通路
                 </span>
                 <Input defaultValue={projectInfo.primaryChannel} disabled style={{ flex: 1 }} />
@@ -137,7 +137,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   销售经理
                 </span>
                 <Input defaultValue={projectInfo.salesManager} disabled style={{ flex: 1 }} />
@@ -147,7 +147,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   项目经理
                 </span>
                 <Input defaultValue={projectInfo.projectManager} disabled style={{ flex: 1 }} />
@@ -157,7 +157,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   架构师
                 </span>
                 <Input defaultValue={projectInfo.architect} disabled style={{ flex: 1 }} />
@@ -167,7 +167,7 @@ const ProblemInfoModule: React.FC = () => {
           <Col span={12}>
             <FormItem>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                <span className="form-label">
                   分包商务经理
                 </span>
                 <Input defaultValue={projectInfo.subcontractingManager} disabled style={{ flex: 1 }} />
@@ -189,7 +189,7 @@ const ProblemInfoModule: React.FC = () => {
             <Col span={12}>
               <FormItem name="problemName" rules={[{ required: true, message: '请输入问题名称' }]}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                  <span className="form-label">
                     问题名称 <span style={{ color: '#ef4444' }}>*</span>
                   </span>
                   <Input placeholder="请输入问题名称" style={{ flex: 1 }} />
@@ -199,7 +199,7 @@ const ProblemInfoModule: React.FC = () => {
             <Col span={12}>
               <FormItem>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                  <span className="form-label">
                     问题识别人
                   </span>
                   <Input defaultValue="sienxu(徐罗帆)" disabled style={{ flex: 1 }} />
@@ -209,7 +209,7 @@ const ProblemInfoModule: React.FC = () => {
             <Col span={12}>
               <FormItem name="problemStatus" rules={[{ required: true, message: '请选择问题状态' }]}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                  <span className="form-label">
                     问题状态 <span style={{ color: '#ef4444' }}>*</span>
                   </span>
                   <Select placeholder="请选择问题状态" style={{ flex: 1 }}>
@@ -223,7 +223,7 @@ const ProblemInfoModule: React.FC = () => {
             <Col span={12}>
               <FormItem name="problemLevel" rules={[{ required: true, message: '请选择问题级别' }]}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                  <span className="form-label">
                     问题级别 <span style={{ color: '#ef4444' }}>*</span>
                   </span>
                   <Select placeholder="请选择问题级别" style={{ flex: 1 }}>
@@ -237,7 +237,7 @@ const ProblemInfoModule: React.FC = () => {
             <Col span={12}>
               <FormItem name="problemScene" rules={[{ required: true, message: '请选择问题场景' }]}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                  <span className="form-label">
                     问题场景 <span style={{ color: '#ef4444' }}>*</span>
                   </span>
                   <Select placeholder="请选择问题场景" style={{ flex: 1 }}>
@@ -253,7 +253,7 @@ const ProblemInfoModule: React.FC = () => {
             <Col span={24}>
               <FormItem name="problemDescription">
                 <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-                  <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px', paddingTop: '8px' }}>
+                  <span className="form-label" style={{ paddingTop: '8px' }}>
                     问题描述
                   </span>
                   <Textarea placeholder="请详细描述问题情况" rows={4} style={{ flex: 1 }} />
@@ -278,7 +278,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="problemType">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           问题类型
                         </span>
                         <Input placeholder="请输入问题类型" style={{ flex: 1 }} />
@@ -288,7 +288,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="mainReason">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           主要原因
                         </span>
                         <Input placeholder="请输入主要原因" style={{ flex: 1 }} />
@@ -298,7 +298,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="secondaryReason">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           次要原因
                         </span>
                         <Input placeholder="请输入次要原因" style={{ flex: 1 }} />
@@ -308,7 +308,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="partner">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           合作伙伴
                         </span>
                         <Input placeholder="请输入合作伙伴" style={{ flex: 1 }} />
@@ -318,7 +318,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="product">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           涉及产品
                         </span>
                         <Input placeholder="请输入涉及产品" style={{ flex: 1 }} />
@@ -328,7 +328,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="affectedObject">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           问题影响对象
                         </span>
                         <Input placeholder="请输入影响对象" style={{ flex: 1 }} />
@@ -338,7 +338,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="impactAmount">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           影响金额
                         </span>
                         <Input placeholder="请输入影响金额" style={{ flex: 1 }} />
@@ -348,7 +348,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="delayDays">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           影响延期(天)
                         </span>
                         <Input placeholder="请输入延期天数" style={{ flex: 1 }} />
@@ -358,7 +358,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="acceptanceMilestone">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           影响验收里程碑
                         </span>
                         <Input placeholder="请输入影响验收里程碑" style={{ flex: 1 }} />
@@ -368,7 +368,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="weeklyReportDisplay">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           周报显示
                         </span>
                         <Radio.Group>
@@ -381,7 +381,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={12}>
                     <FormItem name="overdueReminder">
                       <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
+                        <span className="form-label">
                           逾期控制提醒
                         </span>
                         <Radio.Group>
@@ -396,7 +396,7 @@ const ProblemInfoModule: React.FC = () => {
                   <Col span={24}>
                     <FormItem name="impactAndMeasures">
                       <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-                        <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px', paddingTop: '8px' }}>
+                        <span className="form-label" style={{ paddingTop: '8px' }}>
                           问题影响及措施
                         </span>
                         <Textarea placeholder="请描述问题影响及采取的措施" rows={4} style={{ flex: 1 }} />

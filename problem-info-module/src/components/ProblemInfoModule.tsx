@@ -70,7 +70,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   项目编码
                 </span>
-                <Input value={projectInfo.projectCode} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.projectCode} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -80,7 +80,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   项目名称
                 </span>
-                <Input value={projectInfo.projectName} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.projectName} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -90,7 +90,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   项目行业
                 </span>
-                <Input value={projectInfo.projectIndustry} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.projectIndustry} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -100,7 +100,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   项目状态
                 </span>
-                <Input value={projectInfo.projectStatus} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.projectStatus} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -110,7 +110,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   客户名称
                 </span>
-                <Input value={projectInfo.customerName} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.customerName} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -120,7 +120,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   客户UIN
                 </span>
-                <Input value={projectInfo.customerUIN} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.customerUIN} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -130,7 +130,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   一级通路
                 </span>
-                <Input value={projectInfo.primaryChannel} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.primaryChannel} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -140,7 +140,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   销售经理
                 </span>
-                <Input value={projectInfo.salesManager} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.salesManager} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -150,7 +150,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   项目经理
                 </span>
-                <Input value={projectInfo.projectManager} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.projectManager} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -160,7 +160,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   架构师
                 </span>
-                <Input value={projectInfo.architect} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.architect} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -170,7 +170,7 @@ const ProblemInfoModule: React.FC = () => {
                 <span style={{ marginRight: '12px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                   分包商务经理
                 </span>
-                <Input value={projectInfo.subcontractingManager} disabled style={{ flex: 1 }} />
+                <Input defaultValue={projectInfo.subcontractingManager} disabled style={{ flex: 1 }} />
               </div>
             </FormItem>
           </Col>
@@ -202,7 +202,7 @@ const ProblemInfoModule: React.FC = () => {
                   <span style={{ marginRight: '8px', fontSize: '14px', fontWeight: 500, color: '#374151', width: '96px' }}>
                     问题识别人
                   </span>
-                  <Input value="sienxu(徐罗帆)" disabled style={{ flex: 1 }} />
+                  <Input defaultValue="sienxu(徐罗帆)" disabled style={{ flex: 1 }} />
                 </div>
               </FormItem>
             </Col>

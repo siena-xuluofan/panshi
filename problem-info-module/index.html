@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问题信息模块预览</title>
+    <!-- TDesign React 基础样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/tdesign-react@1.12.0/dist/tdesign.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 自定义样式 */
+        .tdesign-descriptions-item {
+            padding: 8px 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .tdesign-descriptions-item:last-child {
+            border-bottom: none;
+        }
+        .tdesign-form-item {
+            margin-bottom: 16px;
+        }
+        .expandable-section {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 py-8">
+    <div id="root" class="max-w-6xl mx-auto px-4">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6">新建问题</h1>
+        
+        <!-- 项目基础信息 -->
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <h2 class="text-lg font-medium text-gray-900 mb-4">项目基础信息</h2>
+            <div class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">项目编码</span>
+                            <input type="text" value="20211108209778" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">项目名称</span>
+                            <input type="text" value="金华和悦-未来社区" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">项目行业</span>
+                            <input type="text" value="旅建农体/建筑与不动产/地产与物业服务" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">项目状态</span>
+                            <input type="text" value="交付中" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">客户名称</span>
+                            <input type="text" value="金华金开数智运营科技有限公司" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">客户UIN</span>
+                            <input type="text" value="100020778069" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">一级通路</span>
+                            <input type="text" value="国内东区" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">销售经理</span>
+                            <input type="text" value="yuanXXX" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">项目经理</span>
+                            <input type="text" value="kenXXX" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">架构师</span>
+                            <input type="text" value="xxxx" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">分包商务经理</span>
+                            <input type="text" value="xxxx" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 问题信息表单 -->
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <h2 class="text-lg font-medium text-gray-900 mb-4">问题信息</h2>
+            <form id="problemForm" class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">问题名称 <span class="text-red-500">*</span></span>
+                            <input type="text" name="problemName" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入问题名称">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">问题识别人</span>
+                            <input type="text" value="sienxu(徐罗帆)" disabled class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">问题状态 <span class="text-red-500">*</span></span>
+                            <select name="problemStatus" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">请选择问题状态</option>
+                                <option value="草稿">草稿</option>
+                                <option value="处理中">处理中</option>
+                                <option value="已关闭">已关闭</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">问题级别 <span class="text-red-500">*</span></span>
+                            <select name="problemLevel" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">请选择问题级别</option>
+                                <option value="低">低</option>
+                                <option value="中">中</option>
+                                <option value="高">高</option>
+                                <option value="重大">重大</option>
+                                <option value="特大">特大</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">问题场景 <span class="text-red-500">*</span></span>
+                            <select name="problemScene" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">请选择问题场景</option>
+                                <option value="场景1-腾讯胜诉，但客户无偿付能力">场景1-腾讯胜诉，但客户无偿付能力</option>
+                                <option value="场景2-质保金等尾款长期未回">场景2-质保金等尾款长期未回</option>
+                                <option value="场景3-验收款长期未回">场景3-验收款长期未回</option>
+                                <option value="场景4-项目核减，A面未定">场景4-项目核减，A面未定</option>
+                                <option value="场景5-项目核减，A面已定，B面未确定">场景5-项目核减，A面已定，B面未确定</option>
+                                <option value="场景6-项目核减，AB面均已定，但A面尚未回款">场景6-项目核减，AB面均已定，但A面尚未回款</option>
+                                <option value="场景7-A面未签合同，B面提前交付">场景7-A面未签合同，B面提前交付</option>
+                                <option value="场景8-其他">场景8-其他</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tdesign-form-item">
+                    <div class="flex items-start">
+                        <span class="text-sm font-medium text-gray-700 mr-2 w-24 pt-2">问题描述</span>
+                        <textarea name="problemDescription" rows="4" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请详细描述问题情况"></textarea>
+                    </div>
+                </div>
+
+        <!-- 更多信息 - 可展开/收起 -->
+        <div class="mt-6">
+            <div id="advancedToggle" class="flex items-center cursor-pointer text-blue-600 hover:text-blue-700 transition-colors mb-2">
+                <svg id="expandIcon" class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <svg id="collapseIcon" class="w-5 h-5 mr-1 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+                <span>更多信息</span>
+            </div>
+
+            <div id="advancedOptions" class="hidden mt-4 p-4 bg-gray-50 rounded-lg expandable-section">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">问题类型</span>
+                            <input type="text" name="problemType" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入问题类型">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">主要原因</span>
+                            <input type="text" name="mainReason" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入主要原因">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">次要原因</span>
+                            <input type="text" name="secondaryReason" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入次要原因">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">合作伙伴</span>
+                            <input type="text" name="partner" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入合作伙伴">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">涉及产品</span>
+                            <input type="text" name="product" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入涉及产品">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">问题影响对象</span>
+                            <input type="text" name="affectedObject" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入影响对象">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">影响金额</span>
+                            <input type="text" name="impactAmount" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入影响金额">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">影响延期(天)</span>
+                            <input type="text" name="delayDays" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入延期天数">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">影响验收里程碑</span>
+                            <input type="text" name="acceptanceMilestone" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请输入影响验收里程碑">
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">周报显示</span>
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center">
+                                    <input type="radio" id="weeklyYes" name="weeklyReportDisplay" value="是" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                    <label for="weeklyYes" class="ml-2 block text-sm text-gray-700">是</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="weeklyNo" name="weeklyReportDisplay" value="否" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                    <label for="weeklyNo" class="ml-2 block text-sm text-gray-700">否</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tdesign-form-item">
+                        <div class="flex items-center">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24">逾期控制提醒</span>
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center">
+                                    <input type="radio" id="reminderYes" name="overdueReminder" value="是" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                    <label for="reminderYes" class="ml-2 block text-sm text-gray-700">是</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="reminderNo" name="overdueReminder" value="否" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                    <label for="reminderNo" class="ml-2 block text-sm text-gray-700">否</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="tdesign-form-item">
+                        <div class="flex items-start">
+                            <span class="text-sm font-medium text-gray-700 mr-2 w-24 pt-2">问题影响及措施</span>
+                            <textarea name="impactAndMeasures" rows="4" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请描述问题影响及采取的措施"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </form>
+        </div>
+
+        <!-- 问题处理 - 独立卡片 -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+            <h2 class="text-lg font-medium text-gray-900 mb-4">问题处理</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="tdesign-form-item">
+                    <div class="flex items-center">
+                        <span class="text-sm font-medium text-gray-700 mr-2 w-24">期望解决日期</span>
+                        <input type="date" name="expectedDate" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="请选择日期">
+                    </div>
+                </div>
+                <div class="tdesign-form-item">
+                    <div class="flex items-center">
+                        <span class="text-sm font-medium text-gray-700 mr-2 w-24">实际解决日期</span>
+                        <input type="date" name="actualDate" class="flex-1 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-800 cursor-not-allowed" placeholder="请选择日期" disabled>
+                    </div>
+                </div>
+                <div class="tdesign-form-item">
+                    <div class="flex items-center">
+                        <span class="text-sm font-medium text-gray-700 mr-2 w-24">责任人</span>
+                        <input type="text" name="responsible" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="若需添加多位负责人请输入,逗号分隔多个,如zhangsanA@ABC">
+                    </div>
+                </div>
+                <div class="tdesign-form-item">
+                    <div class="flex items-center">
+                        <span class="text-sm font-medium text-gray-700 mr-2 w-24">抄送人 <svg class="inline w-4 h-4 text-blue-500 cursor-pointer ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>抄送人可选</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+                        <input type="text" name="cc" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="若需添加多位抄送人请输入,逗号分隔多个,如zhangsanA@ABC">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部按钮 -->
+        <div class="mt-6 flex space-x-4">
+            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">保存问题</button>
+            <button type="button" id="resetButton" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">重置</button>
+        </div>
+    </div>
+
+    <script>
+        // 展开/收起更多信息
+        const advancedToggle = document.getElementById('advancedToggle');
+        const advancedOptions = document.getElementById('advancedOptions');
+        const expandIcon = document.getElementById('expandIcon');
+        const collapseIcon = document.getElementById('collapseIcon');
+        
+        advancedToggle.addEventListener('click', function() {
+            if (advancedOptions.classList.contains('hidden')) {
+                advancedOptions.classList.remove('hidden');
+                expandIcon.classList.add('hidden');
+                collapseIcon.classList.remove('hidden');
+            } else {
+                advancedOptions.classList.add('hidden');
+                expandIcon.classList.remove('hidden');
+                collapseIcon.classList.add('hidden');
+            }
+        });
+        
+        // 重置表单
+        document.getElementById('resetButton').addEventListener('click', function() {
+            document.getElementById('problemForm').reset();
+        });
+        
+        // 表单提交
+        document.getElementById('problemForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 简单验证必填字段
+            const requiredFields = ['problemName', 'problemStatus', 'problemLevel', 'problemScene'];
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                const input = document.querySelector(`[name="${field}"]`);
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('border-red-500');
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+            
+            if (isValid) {
+                // 收集表单数据
+                const formData = new FormData(this);
+                const data = {};
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+                
+                console.log('表单数据:', data);
+                alert('问题信息已保存！（请查看控制台获取提交数据）');
+            } else {
+                alert('请填写所有必填字段！');
+            }
+        });
+    </script>
+</body>
+</html>

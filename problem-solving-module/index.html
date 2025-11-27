@@ -232,12 +232,43 @@
             outline: 0;
             box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
         }
+        
+        .user-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .user-name {
+            color: #1890ff;
+            font-weight: 500;
+        }
+        
+        .btn-link {
+            background: none;
+            border: none;
+            color: #1890ff;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 0;
+        }
+        
+        .btn-link:hover {
+            color: #40a9ff;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="page-header">
-            <h1 class="page-title">问题处理</h1>
+            <div class="user-info">
+                <h1 class="page-title">问题处理</h1>
+                <div>
+                    <span>当前用户：<span class="user-name" id="currentUserDisplay">未设置</span></span>
+                    <button class="btn-link" onclick="showUserModal()" style="margin-left: 16px;">设置姓名</button>
+                </div>
+            </div>
         </div>
 
         <!-- 处理记录部分 -->
@@ -332,7 +363,25 @@
         </div>
     </div>
 
+    <!-- 用户姓名设置弹窗 -->
+    <div class="modal" id="userModal">
+        <div class="modal-content">
+            <div class="modal-header">设置您的姓名</div>
+            <div class="form-group">
+                <label class="form-label">姓名 *</label>
+                <input type="text" class="form-control" id="userNameInput" placeholder="请输入您的真实姓名">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" style="background-color: #f0f0f0;" onclick="hideUserModal()">取消</button>
+                <button class="btn btn-primary" onclick="saveUserName()">确定</button>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // 当前用户姓名（从 localStorage 获取）
+        let currentUserName = localStorage.getItem('currentUserName') || '';
+
         // 模拟处理记录数据
         let records = [
             {
@@ -391,6 +440,43 @@
 
         // 当前编辑的记录ID
         let currentRecordId = null;
+
+        // 获取当前用户姓名
+        function getCurrentUser() {
+            return currentUserName || '未设置';
+        }
+
+        // 显示用户姓名设置弹窗
+        function showUserModal() {
+            document.getElementById('userNameInput').value = currentUserName;
+            document.getElementById('userModal').style.display = 'flex';
+        }
+
+        // 隐藏用户姓名设置弹窗
+        function hideUserModal() {
+            document.getElementById('userModal').style.display = 'none';
+        }
+
+        // 保存用户姓名
+        function saveUserName() {
+            const userName = document.getElementById('userNameInput').value.trim();
+            
+            if (!userName) {
+                alert('请输入您的姓名');
+                return;
+            }
+            
+            currentUserName = userName;
+            localStorage.setItem('currentUserName', userName);
+            updateUserDisplay();
+            hideUserModal();
+            alert('姓名设置成功');
+        }
+
+        // 更新页面显示的用户姓名
+        function updateUserDisplay() {
+            document.getElementById('currentUserDisplay').textContent = getCurrentUser();
+        }
 
         // 格式化日期时间
         function formatDateTime(date) {
@@ -515,7 +601,7 @@
                 estimatedCompleteTime: estimatedTime,
                 actualCompleteTime: actualTime,
                 result: result,
-                resultFiller: result ? '当前用户' : ''
+                resultFiller: result ? getCurrentUser() : ''
             };
             
             records.unshift(newRecord);
@@ -562,7 +648,7 @@
             if (recordIndex !== -1) {
                 records[recordIndex].result = result;
                 records[recordIndex].actualCompleteTime = actualTime;
-                records[recordIndex].resultFiller = '当前用户';
+                records[recordIndex].resultFiller = getCurrentUser();
                 renderRecords();
                 hideResultModal();
                 alert('处理结果已更新');
@@ -580,7 +666,7 @@
             
             const newComment = {
                 id: comments.length + 1,
-                author: '当前用户',
+                author: getCurrentUser(),
                 time: formatDateTime(new Date()),
                 content: commentText
             };
@@ -593,6 +679,14 @@
 
         // 初始化页面
         document.addEventListener('DOMContentLoaded', function() {
+            // 更新用户显示
+            updateUserDisplay();
+            
+            // 如果用户未设置姓名，自动弹出设置弹窗
+            if (!currentUserName) {
+                showUserModal();
+            }
+            
             renderRecords();
             renderComments();
         });
@@ -607,6 +701,12 @@
         document.getElementById('resultModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 hideResultModal();
+            }
+        });
+
+        document.getElementById('userModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideUserModal();
             }
         });
     </script>

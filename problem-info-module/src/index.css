@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* TDesign 栅格系统样式修复 */
+.t-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.t-col {
+  position: relative;
+  max-width: 100%;
+}
+
+.t-col-12 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.t-col-24 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* 栅格间距 */
+.t-row[style*="margin"] {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.t-row[style*="margin"] > .t-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}

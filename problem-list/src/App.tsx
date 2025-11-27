@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, Input, Table, Tag, Space, Pagination, Select } from 'tdesign-react';
-import { SearchIcon } from 'tdesign-icons-react';
 import type { TableProps } from 'tdesign-react';
 import './App.css';
 
